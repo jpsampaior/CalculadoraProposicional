@@ -27,7 +27,7 @@ public class Operations {
             else return "Falso";
         }
 
-        else if(node.getConnector() == '^') {
+        else if(node.getConnector() == '∧') {
             if(left == 'V' && right == 'V') {
                 return "Verdadeiro";
             }
