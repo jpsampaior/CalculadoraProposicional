@@ -11,20 +11,19 @@ public class validadeExpression {
     
     
     public validadeExpression(String expression) {
-        if(tableaux(createTree(expression)) == true) validacao = "true";
-        else validacao = "false";
+        createTree(expression);
     }
     
     public static boolean tableaux(Expression expression) {
         if (expression.isNegated) {
             return !tableaux(expression.left);
-        } else if (expression.connective == "^") {
+        } else if (expression.connective == "∧") {
             return tableaux(expression.left) && tableaux(expression.right); 
         } else if (expression.connective == "v") {
             return tableaux(expression.left) || tableaux(expression.right); 
-        } else if (expression.connective == "->") {
+        } else if (expression.connective == "→") {
             return !tableaux(expression.left) || tableaux(expression.right); 
-        } else if (expression.connective == "<->") {
+        } else if (expression.connective == "↔") {
             return !tableaux(expression.left) == tableaux(expression.right); 
         } else {
             return false;
@@ -52,7 +51,7 @@ public class validadeExpression {
                     node.left = root;
                     node.right = stack.pop();
                     root = node;
-                } else if (node.connective.equals("∨")) {
+                } else if (node.connective.equals("v")) {
                     node.left = root;
                     node.right = stack.pop();
                     root = node;
@@ -65,14 +64,12 @@ public class validadeExpression {
                     node.right = stack.pop();
                     root = node;
                 }
-            } else if (ch == '-') {
-                isNegated = true;
-            } else if (ch == '¬') {
+            } else if (ch == '~') {
                 isNegated = true;
             } else if (ch == '∧') {
                 root = new Expression("∧", false);
-            } else if (ch == '∨') {
-                root = new Expression("∨", false);
+            } else if (ch == 'v') {
+                root = new Expression("v", false);
             } else if (ch == '→') {
                 root = new Expression("→", false);
             } else if (ch == '↔') {

@@ -119,7 +119,7 @@ public class mainFrame extends javax.swing.JFrame {
         });
 
         btnConditional.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
-        btnConditional.setText("->");
+        btnConditional.setText("→");
         btnConditional.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnConditionalActionPerformed(evt);
@@ -127,7 +127,7 @@ public class mainFrame extends javax.swing.JFrame {
         });
 
         btnBiConditional.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
-        btnBiConditional.setText("<->");
+        btnBiConditional.setText("↔");
         btnBiConditional.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBiConditionalActionPerformed(evt);
@@ -175,24 +175,21 @@ public class mainFrame extends javax.swing.JFrame {
                 .addGap(168, 168, 168)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(btnP, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnQ, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnR, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnNot, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(btnLeft, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnRight, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnDel, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnClear, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(btnP, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnQ, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnR, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnNot, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(btnLeft, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnRight, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnDel, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnClear, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(btnAnd, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -200,8 +197,8 @@ public class mainFrame extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnConditional, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnBiConditional, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(39, 168, Short.MAX_VALUE))))
+                        .addComponent(btnBiConditional, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -227,8 +224,10 @@ public class mainFrame extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder("Valor de P"));
 
+        btnTrueP.setBackground(new java.awt.Color(255, 255, 255));
         btnTrueP.setText("V");
         btnTrueP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -236,6 +235,7 @@ public class mainFrame extends javax.swing.JFrame {
             }
         });
 
+        btnFalseP.setBackground(new java.awt.Color(255, 255, 255));
         btnFalseP.setText("F");
         btnFalseP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -262,8 +262,10 @@ public class mainFrame extends javax.swing.JFrame {
                     .addComponent(btnFalseP)))
         );
 
+        jPanel9.setBackground(new java.awt.Color(255, 255, 255));
         jPanel9.setBorder(javax.swing.BorderFactory.createTitledBorder("Valor de Q"));
 
+        btnTrueQ.setBackground(new java.awt.Color(255, 255, 255));
         btnTrueQ.setText("V");
         btnTrueQ.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -271,6 +273,7 @@ public class mainFrame extends javax.swing.JFrame {
             }
         });
 
+        btnFalseQ.setBackground(new java.awt.Color(255, 255, 255));
         btnFalseQ.setText("F");
         btnFalseQ.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -297,8 +300,10 @@ public class mainFrame extends javax.swing.JFrame {
                     .addComponent(btnFalseQ)))
         );
 
+        jPanel10.setBackground(new java.awt.Color(255, 255, 255));
         jPanel10.setBorder(javax.swing.BorderFactory.createTitledBorder("Valor de R"));
 
+        btnTrueR.setBackground(new java.awt.Color(255, 255, 255));
         btnTrueR.setText("V");
         btnTrueR.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -306,6 +311,7 @@ public class mainFrame extends javax.swing.JFrame {
             }
         });
 
+        btnFalseR.setBackground(new java.awt.Color(255, 255, 255));
         btnFalseR.setText("F");
         btnFalseR.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -419,7 +425,24 @@ public class mainFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCalculateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalculateActionPerformed
-       
+        operations = new Operations();
+        Node node = operations.GenerateNode(txtaInput.getText());
+        if(node.getLeft() == "P") {
+            if(btnTrueP.isSelected()) left = 'V';
+            else left = 'F';  
+            if(btnTrueQ.isSelected()) right = 'V';
+            else right = 'F';
+        } 
+        else {
+            if(btnTrueQ.isSelected()) left = 'V';
+            else left = 'F';
+            if(btnTrueP.isSelected()) right = 'V';
+            else right = 'F';
+        }
+        
+        leftLetter = node.getLeft();
+        
+        txtaOutput.setText(operations.GenerateResult(node, left, right));
     }//GEN-LAST:event_btnCalculateActionPerformed
 
     private void btnPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPActionPerformed
@@ -437,16 +460,16 @@ public class mainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_btnNotActionPerformed
 
     private void btnAndActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAndActionPerformed
-        if (last != "^" && last != "~" && last != "<->" && last != "->" && last != "v" && last != "(") {
-            txtaInput.append("^");
-            last = "^";
+        if (last != "∧" && last != "~" && last != "↔" && last != "→" && last != "v" && last != "(") {
+            txtaInput.append("∧");
+            last = "∧";
         }
     }//GEN-LAST:event_btnAndActionPerformed
 
     private void btnBiConditionalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBiConditionalActionPerformed
-        if (last != "^" && last != "~" && last != "<->" && last != "->" && last != "v" && last != "(") {
-            txtaInput.append("<->");
-            last = "<->";
+        if (last != "∧" && last != "~" && last != "↔" && last != "→" && last != "v" && last != "(") {
+            txtaInput.append("↔");
+            last = "↔";
         }
     }//GEN-LAST:event_btnBiConditionalActionPerformed
 
@@ -485,16 +508,16 @@ public class mainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_btnRActionPerformed
 
     private void btnOrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOrActionPerformed
-        if (last != "^" && last != "~" && last != "<->" && last != "->" && last != "v" && last != "(") {
+        if (last != "∧" && last != "~" && last != "↔" && last != "→" && last != "v" && last != "(") {
             txtaInput.append("v");
             last = "v";
         }
     }//GEN-LAST:event_btnOrActionPerformed
 
     private void btnConditionalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConditionalActionPerformed
-        if (last != "^" && last != "~" && last != "<->" && last != "->" && last != "v" && last != "(") {
-            txtaInput.append("->");
-            last = "->";
+        if (last != "∧" && last != "~" && last != "↔" && last != "→" && last != "v" && last != "(") {
+            txtaInput.append("→");
+            last = "→";
         }
     }//GEN-LAST:event_btnConditionalActionPerformed
 
@@ -521,8 +544,8 @@ public class mainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_btnTrueQActionPerformed
 
     private void btnFalseQActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFalseQActionPerformed
-        btnTrueP.setSelected(false);
-        btnFalseP.setSelected(true);
+        btnTrueQ.setSelected(false);
+        btnFalseQ.setSelected(true);
     }//GEN-LAST:event_btnFalseQActionPerformed
 
     private void btnTrueRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTrueRActionPerformed
@@ -568,7 +591,13 @@ public class mainFrame extends javax.swing.JFrame {
                 new mainFrame().setVisible(true);            
             }
         });
+        
+        
     }
+    private String leftLetter;
+    private char left;
+    private char right;
+    private Operations operations;
     private String last = "";
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAnd;
@@ -596,19 +625,7 @@ public class mainFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
-    private javax.swing.JRadioButton jRadioButton10;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
-    private javax.swing.JRadioButton jRadioButton5;
-    private javax.swing.JRadioButton jRadioButton6;
-    private javax.swing.JRadioButton jRadioButton7;
-    private javax.swing.JRadioButton jRadioButton8;
-    private javax.swing.JRadioButton jRadioButton9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel lblTitle;
