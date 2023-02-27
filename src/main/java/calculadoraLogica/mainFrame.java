@@ -425,24 +425,23 @@ public class mainFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCalculateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalculateActionPerformed
-        operations = new Operations();
-        Node node = operations.GenerateNode(txtaInput.getText());
-        if(node.getLeft() == "P") {
-            if(btnTrueP.isSelected()) left = 'V';
-            else left = 'F';  
-            if(btnTrueQ.isSelected()) right = 'V';
-            else right = 'F';
+        if(numParen == 0) {
+            operations = new Operations();
+            boolean result = operations.solveEquation(txtaInput.getText(), btnTrueP.isSelected(), btnTrueQ.isSelected(), btnTrueR.isSelected());
+            if(result == true) {
+                txtaOutput.setText("Verdadeiro");
+            }
+            else {
+                txtaOutput.setText("Falso");
+            } 
         } 
         else {
-            if(btnTrueQ.isSelected()) left = 'V';
-            else left = 'F';
-            if(btnTrueP.isSelected()) right = 'V';
-            else right = 'F';
+            txtaOutput.setText("Equação não aceita, verifique os '(' ')'");
         }
         
-        leftLetter = node.getLeft();
         
-        txtaOutput.setText(operations.GenerateResult(node, left, right));
+        
+        
     }//GEN-LAST:event_btnCalculateActionPerformed
 
     private void btnPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPActionPerformed
@@ -477,12 +476,19 @@ public class mainFrame extends javax.swing.JFrame {
         txtaInput.setText("");
         last = "";
         txtaOutput.setText("");
+        btnTrueP.setSelected(false);
+        btnTrueQ.setSelected(false);
+        btnTrueR.setSelected(false);
+        btnFalseP.setSelected(false);
+        btnFalseQ.setSelected(false);
+        btnFalseR.setSelected(false);
     }//GEN-LAST:event_btnClearActionPerformed
 
     private void btnLeftActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLeftActionPerformed
-        if (last != "P" && last != "Q" && last != "R" && last != "(" && last != ")") {
+        if (last != "P" && last != "Q" && last != "R" && last != ")") {
             txtaInput.append("(");
             last = "(";
+            numParen++;
         }
     }//GEN-LAST:event_btnLeftActionPerformed
 
@@ -522,9 +528,10 @@ public class mainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_btnConditionalActionPerformed
 
     private void btnRightActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRightActionPerformed
-        if (last != "P" && last != "Q" && last != "R" && last != "(" && last != ")") {
+        if (last != "∧" && last != "~" && last != "↔" && last != "→" && last != "(") {
             txtaInput.append(")");
             last = ")";
+            numParen--;
         }
     }//GEN-LAST:event_btnRightActionPerformed
 
@@ -594,6 +601,7 @@ public class mainFrame extends javax.swing.JFrame {
         
         
     }
+    private int numParen;
     private String leftLetter;
     private char left;
     private char right;
@@ -632,5 +640,4 @@ public class mainFrame extends javax.swing.JFrame {
     private javax.swing.JTextArea txtaInput;
     private javax.swing.JTextArea txtaOutput;
     // End of variables declaration//GEN-END:variables
-
 }
