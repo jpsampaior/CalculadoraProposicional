@@ -438,10 +438,6 @@ public class mainFrame extends javax.swing.JFrame {
         else {
             txtaOutput.setText("Equação não aceita, verifique os '( ' ')'");
         }
-        
-        
-        
-        
     }//GEN-LAST:event_btnCalculateActionPerformed
 
     private void btnPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPActionPerformed
@@ -566,9 +562,6 @@ public class mainFrame extends javax.swing.JFrame {
         btnFalseR.setSelected(true);
     }//GEN-LAST:event_btnFalseRActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
