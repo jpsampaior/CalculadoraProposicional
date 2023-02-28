@@ -6,12 +6,19 @@ public class Operations {
     public boolean solveEquation(String equation, boolean pValue, boolean qValue, boolean rValue) {
         Stack<Boolean> operands = new Stack<Boolean>();
         Stack<Character> connectives = new Stack<Character>();
+        boolean parenIsNegated = false;
+        char last = 'a';
         
         for (int i = 0; i < equation.length(); i++) {
             char ch = equation.charAt(i);
+            if(i>0) {
+                last = equation.charAt(i-1);
+            }
             
             //Abre o parentese
             if (ch == '(') {
+                if(last == '~') parenIsNegated = true;
+                
                 connectives.push(ch);
             } 
 
@@ -22,7 +29,14 @@ public class Operations {
                     boolean operand2 = operands.pop();
                     boolean operand1 = operands.pop();
                     boolean result = applyConnective(connective, operand1, operand2);
-                    operands.push(result);
+                    
+                    if(parenIsNegated == true) {
+                        operands.push(!result);
+                    }
+                    else {
+                        operands.push(result);
+                    }
+                    
                 }
                 connectives.pop(); // Descartar o parêntese de abertura
             } 
@@ -33,11 +47,12 @@ public class Operations {
                     boolean operand2 = operands.pop();
                     boolean operand1 = operands.pop();
                     boolean result = applyConnective(connective, operand1, operand2);
+                    
                     operands.push(result);
                 }
                 connectives.push(ch);
             } 
-
+            
             else {
                 boolean operand;
                 
@@ -51,7 +66,13 @@ public class Operations {
                     operand = qValue;
                 }
                 
-                operands.push(operand);
+                if(last == '~') {
+                    operands.push(!operand);
+                }
+                else {
+                    operands.push(operand);
+                }
+                
             }
         }
         

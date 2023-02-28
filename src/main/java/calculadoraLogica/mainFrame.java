@@ -436,7 +436,7 @@ public class mainFrame extends javax.swing.JFrame {
             } 
         } 
         else {
-            txtaOutput.setText("Equação não aceita, verifique os '(' ')'");
+            txtaOutput.setText("Equação não aceita, verifique os '( ' ')'");
         }
         
         
@@ -482,6 +482,7 @@ public class mainFrame extends javax.swing.JFrame {
         btnFalseP.setSelected(false);
         btnFalseQ.setSelected(false);
         btnFalseR.setSelected(false);
+        numParen = 0;
     }//GEN-LAST:event_btnClearActionPerformed
 
     private void btnLeftActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLeftActionPerformed
