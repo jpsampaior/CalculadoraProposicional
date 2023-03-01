@@ -130,7 +130,7 @@ public class Operations {
     a tablea verdade */
     public boolean applyConnective(char connective, boolean operand1, boolean operand2) {
         if(connective == 'v') {
-            if(operand1 == true || operand2 == false) {
+            if(operand1 == true || operand2 == true) {
                 return true;
             }
             else return false;
